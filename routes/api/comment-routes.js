@@ -13,10 +13,9 @@ router.route('/:pizzaId').post(addComment);
 router
   .route('/:pizzaId/:commentId')
   .put(addReply)
-  .delete(removeComment)
+  .delete(removeComment);
 
-//delete
+// /api/comments/<pizzaId>/<commentId>/<replyId>
 router.route('/:pizzaId/:commentId/:replyId').delete(removeReply);
-
 
 module.exports = router;
